@@ -22,8 +22,8 @@ pipeline {
 	
 	stage('deployment'){
 		steps{
-		//deploy adapters: [tomcat9(credentialsId: 'TomcatCreds' path: '', url: 'http://50.16.106.200:8080/:8080/')], contextPath: 'counterwebapp', war: 'target/*.war'
-		deploy adapters: [tomcat9(url: 'http://50.16.106.200:8080//', 
+		//deploy adapters: [tomcat9(credentialsId: 'TomcatCreds' path: '', url: 'http://54.196.247.245:8080/')], contextPath: 'counterwebapp', war: 'target/*.war'
+		deploy adapters: [tomcat9(url: 'http://54.196.247.245:8080/', 
                               credentialsId: 'TomcatCreds')], 
                      war: 'target/*.war',
                      contextPath: 'app'
