@@ -30,7 +30,7 @@ pipeline {
                     def tomcatServer = 'http://54.211.79.23:8080/' // Update with your Tomcat server URL
                     
                     deploy adapters: [tomcat( 
-                        credentialsId: tomcatCreds.id, 
+                        credentialsId: TomcatCreds.id, 
                         url: tomcatServer
                     )], 
                     war: 'target/*.war',
